@@ -5,7 +5,7 @@
 }
 
 :root {
-    --orange:hsl(25, 97%, 53%);
+  --orange: hsl(25, 97%, 53%);
   --white: hsl(0, 0%, 100%);
   --light-grey: hsl(217, 12%, 63%);
   --meduim-grey: hsl(216, 12%, 54%);
@@ -13,7 +13,141 @@
   --very-dark-blue: hsl(216, 12%, 8%);
 }
 
-body{
-    font-size: 15px;
-    font-family: 'Overpass', sans-serif;
+body {
+  font-size: 15px;
+  font-family: "Overpass", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-content: center;
+  background-color: var(--very-dark-blue);
+  min-height: 100vh;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 315px;
+  place-content: center;
+  margin: auto;
+  border-radius: 24px;
+  padding: 24px;
+  background-color: var(--dark-blue);
+}
+.star-div {
+  position: relative;
+}
+.abs-positioning {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+.img1 {
+  width: 12px;
+  height: 12px;
+}
+h1 {
+  color: var(--white);
+  font-size: 20px;
+  margin: 24px 0 16px;
+}
+.main-paragraph{
+  color: var(--light-grey);
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+.rating-div {
+  display: flex;
+  justify-content: space-between;
+  color: var(--light-grey);
+  margin-bottom: 24px;
+}
+.rating {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: hsla(217, 12%, 63%, 0.151);
+  position: relative;
+}
+
+.rating-number {
+  position: absolute;
+  color: --light-grey;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn {
+  background-color: var(--orange);
+  border-radius: 9999px;
+  padding: 8px 12px;
+  color: var(--white);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+}
+
+.btn:active,
+.btn:hover {
+  background-color: var(--white);
+  color: var(--orange);
+  cursor: pointer;
+}
+
+footer {
+  color: rgb(235, 225, 85);
+  text-align: center;
+  margin-top: 16px;
+  font-size: 12px;
+}
+
+footer a {
+  color: white;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.rating:hover {
+  background-color: var(--orange);
+  color: var(--white);
+  cursor: pointer;
+}
+.rating:active {
+  background-color: var(--light-grey);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.thanks-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.thanks {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 16px;
+
+}
+
+.thanks-words {
+  color: var(--light-grey);
+  text-align: center;
+  font-size: 11px;
+  font-size: 12px;
+}
+
+.selection {
+  color: var(--orange);
+  background-color: hsla(217, 12%, 63%, 0.151);
+  padding: 5px 8px;
+  border-radius: 9999px;
+  margin: 16px;
+  font-size: 12px;
+
 }
