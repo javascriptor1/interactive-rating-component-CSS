@@ -6,6 +6,7 @@
 
 :root {
   --orange: hsl(25, 97%, 53%);
+  --orange-opacity: hsla(25, 97%, 53%, 0.459);
   --white: hsl(0, 0%, 100%);
   --light-grey: hsl(217, 12%, 63%);
   --meduim-grey: hsl(216, 12%, 54%);
@@ -95,6 +96,12 @@ h1 {
   background-color: var(--white);
   color: var(--orange);
   cursor: pointer;
+}
+
+.btn:disabled{
+  background-color: var(--orange-opacity);
+  color: var(--white);
+  cursor: no-drop;
 }
 
 footer {

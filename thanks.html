@@ -24,19 +24,18 @@
 
     <main class="thanks-div">
       <div class="star-div">
-        <img
-          src="images/illustration-thank-you.svg"
-          alt="Thank you image"
-        />
+        <img src="images/illustration-thank-you.svg" alt="Thank you image" />
       </div>
 
       <!-- Thank you state start -->
-      <p class="selection">You selected <span>4 </span>out of 5</p>
+      <p class="selection">
+        You selected <span class="sent-rating"> </span>out of 5
+      </p>
       <!-- Add rating here -->
       <p class="thanks">Thank you!</p>
       <p class="thanks-words">
-         We appreciate you taking the time to give a rating. If
-          you ever need more support,  don’t <br>hesitate to  get in touch!
+        We appreciate you taking the time to give a rating. If you ever need
+        more support, don’t <br />hesitate to get in touch!
       </p>
       <!-- Thank you state end -->
     </main>
@@ -47,5 +46,11 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">MKF</a>
     </footer>
+
+    <script>
+      let queryString = location.search.substring(1);
+      const votingValue = document.querySelector(".sent-rating");
+      votingValue.textContent = queryString.slice(-1) + ' ';
+    </script>
   </body>
 </html>
