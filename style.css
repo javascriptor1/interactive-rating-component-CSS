@@ -87,6 +87,7 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 2px;
   border: none;
+  width: 100%;
 }
 
 .btn:active,
@@ -150,4 +151,10 @@ footer a {
   margin: 16px;
   font-size: 12px;
 
+}
+
+.active {
+  background-color: var(--light-grey);
+  color: var(--white);
+  cursor: pointer;
 }
