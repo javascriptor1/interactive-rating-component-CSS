@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
+
     <link
       rel="icon"
       type="image/png"
@@ -16,44 +17,92 @@
       href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Frontend Mentor | Interactive rating component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(64, 100%, 75%);
+      }
+    </style>
   </head>
-  <body>
-    <!-- Rating state start -->
-
-    <main>
-      <div class="star-div rating">
-        <img src="images/icon-star.svg" alt="icon-star" class="abs-positioning img1"/>
+  <body class="grid place-content-center min-h-screen bg-VeryDarkBlue">
+    <main
+      class="flex flex-col w-[340px] max-w-[375px] bg-DarkBlue p-[1rem] rounded-xl"
+    >
+      <!-- Rating state start -->
+      <div
+        class="w-[35px] h-[35px] bg-[#959eac27] rounded-full flex items-center justify-center"
+      >
+        <img
+          src="images/icon-star.svg"
+          alt="star orange icon"
+          class="w-[12px] h-[12px]"
+        />
       </div>
-
-      <h1>How did we do?</h1>
-      <p class="main-paragraph">
+      <h1 class="text-white text-2xl pt-4 font-bold">How did we do?</h1>
+      <p class="text-LightGrey pt-4 text-[15px]">
         Please let us know how we did with your support request. All feedback is
         appreciated to help us improve our offering!
       </p>
-      <div class="rating-div">
-        <div class="rating"><span class="rating-number">1</span></div>
-        <div class="rating"><span class="rating-number">2</span></div>
-        <div class="rating"><span class="rating-number">3</span></div>
-        <div class="rating"><span class="rating-number">4</span></div>
-        <div class="rating"><span class="rating-number">5</span></div>
-      </div>
+
       <form action="thanks.html" method="GET">
-        
-        <input type="text" class="rating-input" hidden name="rating-level">  
-        <button class="btn" disabled >Submit</button>
+        <fieldset>
+          <legend>
+            <div class="flex justify-between items-center min-w-[280px] ml-4">
+              <div>
+                <input type="radio" name="rating" value="1" id="one" />
+                <label for="one">1</label>
+              </div>
+              <div>
+                <input type="radio" name="rating" value="2" id="two" />
+                <label for="two">2</label>
+              </div>
+              <div>
+                <input type="radio" name="rating" value="3" id="three" />
+                <label for="three">3</label>
+              </div>
+              <div>
+                <input type="radio" name="rating" value="4" id="four" />
+                <label for="four">4</label>
+              </div>
+              <div>
+                <input type="radio" name="rating" value="5" id="five" />
+                <label for="five">5</label>
+              </div>
+            </div>
+          </legend>
+          <button
+            class="rounded-full bg-Orange w-full font-bold text-white py-[8px] px-[12px] uppercase tracking-[2px] border-none mt-8 hover:bg-white hover:text-Orange"
+          >
+            Submit
+          </button>
+        </fieldset>
       </form>
-     
+
+      <!-- Rating state end -->
+
+      <!-- Thank you state start -->
+      <!-- You selected -->
+      <!-- Add rating here -->
+      <!-- out of 5 Thank you! We appreciate you taking the time to give a rating. If
+      you ever need more support, don’t hesitate to get in touch! -->
+      <!-- Thank you state end -->
     </main>
 
-    <footer>
+    <footer class="attribution text-white mt-16">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">MKF</a>
+      >
+      Coded by <a href="#">MKF</a>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
